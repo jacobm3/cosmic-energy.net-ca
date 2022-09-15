@@ -23,6 +23,7 @@ Run PowerShell as Administrator
 ```
 $URL = "https://raw.githubusercontent.com/jacobm3/cosmic-security.net-ca/main/Astronomer-cosmic-security.net-root-a.crt"
 $Path = "Astronomer-cosmic-security.net-root-a.crt"
+Invoke-WebRequest -URI $URL -OutFile $Path
 
 Import-Certificate -FilePath .\Astronomer-cosmic-security.net-root-a.crt -CertStoreLocation Cert:\LocalMachine\Root
 
